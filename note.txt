@@ -1,0 +1,208 @@
+
+---Create the table 
+php artisan make:migration create_students_table;
+php artisan make:migration create_users_table;
+
+
+----migrate the table
+php artisan migrate => craete the table
+
+php artisan migrate:rollback => last command remove 
+
+php artisan migrate:reset => all migration effects removed
+
+php artisan migrate:refresh  => migrate and rollback both work
+
+
+----Modifaction with migration
+
+=> php artisan make:migration update_students_table --table=students
+=>php artisan make:migration update_users_table --table=users
+=> update column
+=> php artisan migrate
+
+1. Column Modification
+	$table->renameColumn('city', 'cities');
+            $table->dropColumn('percentage');
+            $table->string('city' , 20)->default('No city')->change();
+            $table->string('email',50)->default('mail@gmail.com')->change();
+
+
+2. Table Modification
+	Schema::rename('students' , 'student');
+        	Schema::dropIfExists('users');
+
+
+Constraints with Migration :
+
+MySQL => 	NOT NULL 			$table->string('email')->nullable();
+		UNIQUE			$table->string('email')->unique();
+		DEFAULT			$table->string('city')->default('Agra');
+		FOREIGN KEY		$table->foreign('user_id')->refrence('id')->on('users');
+		PRIMARY KEY		$table->primary('user_id');
+		CHECK			DB::statement(ALTER TABLE users ADD CONSTRAINT age CHECK (age>18);');
+
+
+Column Modifires
+
+->after('column')
+->autoIncrement()
+->comment('my cmt')
+->first()
+->from(integer)
+->unsigned()
+->invisible()
+->useCurrent()
+->useCurrentOnUpadte()
+
+
+HOW TO CREATE MIGRATION FILE :-
+		 php artisan make:migration create_table_name
+		
+		example :- php artisan make:migration create_users_table
+
+
+HOW TO CRATE DATABASE'S TABLE:-
+			 Schema::create('users', function (Blueprint $table) {
+            		 	$table->id();
+           		 	$table->string('name');
+           		 	$table->string('email')->unique();
+            		 	$table->string('password');
+            		 	$table->timestamps(); // Adds `created_at` and `updated_at` columns
+       			 });
+
+HOW TO MODIFY TABLES:-
+		php artisan make:migration add_phone_number_to_users_table
+		
+
+		example :- 
+			Schema::table('users', function (Blueprint $table) {
+            			$table->string('phone_number')->nullable()->after('email');
+        			});
+
+HOW TO ADD CONSTRAINTS & MODIFIRES ON TABLES
+	Adding a Foreign Key Constraint:
+
+		$table->unsignedBigInteger('post_id');
+		$table->foreign('post_id')->references('id')->on('posts');
+
+
+	Adding a Unique Constraint:
+
+		$table->string('email')->unique();
+
+
+	Modifying Column Attributes:
+
+		$table->string('name', 100)->change();
+
+
+	Adding Nullable Columns:
+
+		$table->string('phone')->nullable();
+
+
+	Dropping a Column:
+
+		$table->dropColumn('phone');
+
+
+HOW TO ROLLBACK AND RESET MIGRATION
+
+	Run All Migrations:
+
+		php artisan migrate
+
+
+	Rollback the Last Migration:
+
+		php artisan migrate:rollback
+	
+
+	Rollback All Migrations:
+
+		php artisan migrate:reset
+
+
+
+
+
+Artisan Seeders Command 
+
+MAKE SEEDER
+ 	php artisan make:seeder StudentSeeder
+
+DATABASE SAVE
+	php artisan db:seed
+	php artisan db:seed --force
+
+
+	php artisan db:seed --classUserSeeder =>for particular seeder
+	php artisan db:seed --classUserSeeder --force
+
+
+
+ARTSAN FACTORY COMMANDS
+
+	php artisan make:factory StudentFactory 						(create factory file)
+	php artisan make:factory studentsFactory --model=Student 		(create Factory file then create model file)
+	php artisan make:model student -f 							(create Model file then create Factory file)
+
+ADD THE DATA IN DATABASE TABLE
+	php artisan db:seed
+
+DATABASE ADD IN SEEDER FILE
+	php artisan db:seed --class=UserSeeder
+
+MIGRATION AND SEEDING TOGETHER
+	php artisan migrate:fresh --seed
+
+
+
+
+---QUEARY BUILDER 
+	-> protects from sql injection attacks
+	-> all database support
+
+	=> work in 3 process
+		1.  make controller
+		2.  create method in controller
+		3.  
+
+=> CRUD OPRATION
+		1. Create -> insert()
+		2. Read -> get()
+		3. Upadte -> upadte()
+		4.  Delete -> delete()
+
+SELECT * FROM users    =>  DB::table('users')->get()
+
+SELECT name , city  FROM users    =>  DB::table('users')->select('name' , 'city')->get()
+
+SQL COMMAMND								QUEARY BULIDER COMMAND
+
+SELECT * FROM users  WHERE city = 'goa' 				=>  DB::table('users')->where('city' , '=' , 'goa')->get()
+SELECT * FROM users  WHERE city = 'goa' and age > 18 ;   	=>  DB::table('users')->where('city' , '=' , 'goa')->where('age' , '>' , '18')->get()
+SELECT * FROM users  WHERE city = 'goa' or age > 18 ; 	 =>  DB::table('users')->where('city' , '=' , 'goa')->orWhere('age' , '>' , '18')->get()
+
+
+WHERE COMMAND IN QUEARY BILDER
+
+	whereBetween()
+	whereIn()
+	whereNull()
+	whereMonth()
+	whereDay()
+	whereYear()
+	whereTime()
+
+
+
+
+
+
+
+
+
+
+
