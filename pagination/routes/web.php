@@ -13,7 +13,7 @@ Route::controller(UserController::class)->group(function(){
   
   Route::post('/update/{id}',  'updateUser')->name('update.user');
   
-  Route::get('/updatepage/{id}',  'updatePage')->name('update.page');
+  Route::get('/updatepage/{id}',  'updateUser')->name('update.page');
   
   Route::get('/delete/{id}',  'deleteUser')->name('delete.user');
   

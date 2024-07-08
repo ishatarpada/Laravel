@@ -29,7 +29,15 @@ class UserController extends Controller
 
     public function showUser()
     {
-        $users = DB::table('users')->get();
+        // $users = DB::table('users')->orderBy('name')->simplePaginate(6);
+        // $users = DB::table('users')->paginate(5 , ['*'] , 'p' ,2);
+        // $users = DB::table('users')->paginate(5 , ['*'] , 'p');
+        // $users = DB::table('users')->paginate(5)->appends(['sort' => 'votes']);
+        // $users = DB::table('users')->paginate(5)->appends(['sort' => 'votes', 'test' => 'isha']);
+        // $users = DB::table('users')->paginate(5)->fragment('users');
+        $users = DB::table('users')->orderBy('id')->cursorPaginate(5);
+
+        // return $users;
         return view('allusers', ['data' => $users]);
     }
 
@@ -62,7 +70,7 @@ class UserController extends Controller
     {
         // $users = DB::table('users')->where('id', $id)->get();
         $users = DB::table('users')->find($id);
-        return view('update', ['data' => $users]);
+        return view('updateUser', ['id' => $id]);
         // return $users;
     }
 
