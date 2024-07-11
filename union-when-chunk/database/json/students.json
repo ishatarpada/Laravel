@@ -1,0 +1,32 @@
+[
+  {
+    "name": "isha",
+    "email": "ishapatel@gmail.com",
+    "city": "3",
+    "age": 18
+  },
+  {
+    "name": "disha",
+    "email": "dishapatel@gmail.com",
+    "city": "5",
+    "age": 20
+  },
+  {
+    "name": "manshi",
+    "email": "manshipatel@gmail.com",
+    "city": "1",
+    "age": 12
+  },
+  {
+    "name": "harshika",
+    "email": "harshikapatel@gmail.com",
+    "city": "2",
+    "age": 15
+  },
+  {
+    "name": "devu",
+    "email": "devu@gmail.com",
+    "city": "3",
+    "age": 22
+  }
+]
