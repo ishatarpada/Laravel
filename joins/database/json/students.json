@@ -1,0 +1,44 @@
+[
+  {
+    "name": "isha",
+    "email": "ishapatel@gmail.com",
+    "city": "3",
+    "age": 30
+  },
+  {
+    "name": "disha",
+    "email": "dishapatel@gmail.com",
+    "city": "5",
+    "age": 28
+  },
+  {
+    "name": "manshi",
+    "email": "manshipatel@gmail.com",
+    "city": "1",
+    "age": 32
+  },
+  {
+    "name": "harshika",
+    "email": "harshikapatel@gmail.com",
+    "city": "2",
+    "age": 29
+  },
+  {
+    "name": "devu",
+    "email": "devu@gmail.com",
+    "city": "3",
+    "age": 31
+  },
+  {
+    "name": "viraj",
+    "email": "virajpatel@gmail.com",
+    "city": "4",
+    "age": 27
+  },
+  {
+    "name": "harsh",
+    "email": "harshpatel@gmail.com",
+    "city": "5",
+    "age": 26
+  }
+]

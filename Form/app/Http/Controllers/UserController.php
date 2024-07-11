@@ -41,7 +41,7 @@ class UserController extends Controller
 
     public function updateUser(Request $req, $id)
     {
-        return $req;
+        // return $req;
         $users = DB::table('users')->where('id', $id)->update(
             [
                 'name' => $req->name,
@@ -52,7 +52,7 @@ class UserController extends Controller
             ]
         );
         if ($users) {
-            echo "<h1>Data Successfully updated. </h1>";
+            // echo "<h1>Data Successfully updated. </h1>";
             return redirect()->route('home');
         } else {
             echo "<h1>Data not updated. </h1>";
@@ -62,8 +62,7 @@ class UserController extends Controller
     {
         // $users = DB::table('users')->where('id', $id)->get();
         $users = DB::table('users')->find($id);
-        return view('update', ['data' => $users]);
-        // return $users;
+        return view('updateUser', ['data' => $users]);
     }
 
 

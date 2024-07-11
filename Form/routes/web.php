@@ -11,9 +11,8 @@ Route::controller(UserController::class)->group(function(){
   
   Route::post('/add',  'addUser')->name('addUser');
   
-  Route::post('/update/{id}',  'updateUser')->name('update.user');
-  
-  Route::get('/updatepage/{id}',  'updatePage')->name('update.page');
+  Route::post('/update/{id}',  'updateUser')->name('update.user');  
+  Route::get('/updatePage/{id}',  'updatePage')->name('update.page');
   
   Route::get('/delete/{id}',  'deleteUser')->name('delete.user');
   
