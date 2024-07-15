@@ -15,9 +15,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <h1 class="card-header font-bold text-2xl text-danger text-center">Register</h1>
+                    <h1 class="card-header font-bold text-2xl text-primary text-center">Register</h1>
                     <div class="card-body">
-                        <form method="POST" class="row g-3">
+                        <form action="{{route("addUser")}}" method="POST" class="row g-3">
                             @csrf
                             <div class="col-md-12 mb-3">
                                 <label for="name" class="form-label font-bold text-2xl">Name</label>
@@ -25,18 +25,6 @@
                                     class="form-control @error('name') is-invalid @enderror" id="name"
                                     name="name">
                                 @error('name')
-                                    <span class="alert alert-danger mt-2 d-flex align-items-center" role="alert">
-                                        <i class="bi bi-exclamation-triangle-fill me-3 text-danger"></i>
-                                        <span>{{ $message }}</span>
-                                    </span>
-                                @enderror
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <label for="age" class="form-label font-bold text-2xl">Age</label>
-                                <input type="text" value="{{ old('age') }}"
-                                    class="form-control @error('age') is-invalid @enderror" id="age"
-                                    name="age">
-                                @error('age')
                                     <span class="alert alert-danger mt-2 d-flex align-items-center" role="alert">
                                         <i class="bi bi-exclamation-triangle-fill me-3 text-danger"></i>
                                         <span>{{ $message }}</span>
@@ -55,44 +43,7 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="col-md-12 mb-3">
-                                <label for="password" class="form-label font-bold text-2xl">Password</label>
-                                <input type="password" value="{{ old('password') }}"
-                                    class="form-control @error('password') is-invalid @enderror" id="password"
-                                    name="password">
-                                @error('password')
-                                    <span class="alert alert-danger mt-2 d-flex align-items-center" role="alert">
-                                        <i class="bi bi-exclamation-triangle-fill me-3 text-danger"></i>
-                                        <span>{{ $message }}</span>
-                                    </span>
-                                @enderror
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <label for="city" class="form-label font-bold text-2xl">City</label>
-                                <br>
-                                <select id="city"
-                                    class="form-select w-100 p-2 rounded border border-gray-700 @error('city') is-invalid @enderror"
-                                    name="city">
-                                    <option value="" selected>Choose...</option>
-                                    <option value="Ahemdabad" {{ old('city') == 'Ahemdabad' ? 'selected' : '' }}>
-                                        Ahemdabad</option>
-                                    <option value="Rajkot" {{ old('city') == 'Rajkot' ? 'selected' : '' }}>Rajkot
-                                    </option>
-                                    <option value="Vadodara" {{ old('city') == 'Vadodara' ? 'selected' : '' }}>Vadodara
-                                    </option>
-                                    <option value="Surat" {{ old('city') == 'Surat' ? 'selected' : '' }}>Surat
-                                    </option>
-                                    <option value="Gandhinagar" {{ old('city') == 'Gandhinagar' ? 'selected' : '' }}>
-                                        Gandhinagar</option>
-                                </select>
-                                @error('city')
-                                    <span class="alert alert-danger mt-2 d-flex align-items-center" role="alert">
-                                        <i class="bi bi-exclamation-triangle-fill me-3 text-danger"></i>
-                                        <span>{{ $message }}</span>
-                                    </span>
-                                @enderror
-                            </div>
-                            <button type="submit" class="btn btn-danger m-3 btn-lg">Submit</button>
+                            <button type="submit" class="btn btn-primary m-3 btn-lg">Submit</button>
                         </form>
                     </div>
                 </div>
