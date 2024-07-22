@@ -1,0 +1,82 @@
+[
+  {
+    "id": 101,
+    "email": "john.doe@example.com",
+    "phone": "9876543210",
+    "address": "123 Main Street",
+    "city": "Mumbai",
+    "student_id": 1
+  },
+  {
+    "id": 102,
+    "email": "jane.smith@example.com",
+    "phone": "9123456789",
+    "address": "456 Elm Street",
+    "city": "Delhi",
+    "student_id": 2
+  },
+  {
+    "id": 103,
+    "email": "michael.johnson@example.com",
+    "phone": "9876512345",
+    "address": "789 Pine Street",
+    "city": "Bengaluru",
+    "student_id": 3
+  },
+  {
+    "id": 104,
+    "email": "emily.davis@example.com",
+    "phone": "9123487654",
+    "address": "321 Oak Street",
+    "city": "Hyderabad",
+    "student_id": 4
+  },
+  {
+    "id": 105,
+    "email": "william.brown@example.com",
+    "phone": "9876543212",
+    "address": "654 Cedar Street",
+    "city": "Chennai",
+    "student_id": 5
+  },
+  {
+    "id": 106,
+    "email": "olivia.wilson@example.com",
+    "phone": "9123456781",
+    "address": "987 Birch Street",
+    "city": "Ahmedabad",
+    "student_id": 6
+  },
+  {
+    "id": 107,
+    "email": "james.taylor@example.com",
+    "phone": "9876512349",
+    "address": "147 Maple Street",
+    "city": "Pune",
+    "student_id": 7
+  },
+  {
+    "id": 108,
+    "email": "ava.anderson@example.com",
+    "phone": "9123487657",
+    "address": "258 Spruce Street",
+    "city": "Kolkata",
+    "student_id": 8
+  },
+  {
+    "id": 109,
+    "email": "alexander.thomas@example.com",
+    "phone": "9876543216",
+    "address": "369 Aspen Street",
+    "city": "Jaipur",
+    "student_id": 9
+  },
+  {
+    "id": 110,
+    "email": "sophia.martinez@example.com",
+    "phone": "9123456784",
+    "address": "741 Fir Street",
+    "city": "Lucknow",
+    "student_id": 10
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 101,
+    "title": "Economic Growth in 2024",
+    "description": "The global economy is projected to grow by 4.5% in 2024, driven by recovery in major economies and increased consumer spending.",
+    "user_id": 1
+  },
+  {
+    "id": 102,
+    "title": "New Technological Advancements",
+    "description": "Innovations in AI and machine learning are set to revolutionize various industries, from healthcare to finance.",
+    "user_id": 2
+  },
+  {
+    "id": 103,
+    "title": "Climate Change Initiatives",
+    "description": "Governments worldwide are implementing new policies to combat climate change and reduce carbon emissions.",
+    "user_id": 2
+  },
+  {
+    "id": 104,
+    "title": "Healthcare Breakthroughs",
+    "description": "Recent medical research has led to significant breakthroughs in the treatment of chronic diseases.",
+    "user_id": 4
+  },
+  {
+    "id": 105,
+    "title": "Global Trade Agreements",
+    "description": "New trade agreements between major economies are expected to boost international trade and economic cooperation.",
+    "user_id": 1
+  },
+  {
+    "id": 106,
+    "title": "Education Reforms",
+    "description": "Educational institutions are adopting new technologies and methodologies to improve learning outcomes.",
+    "user_id": 3
+  },
+  {
+    "id": 107,
+    "title": "Space Exploration Advances",
+    "description": "The space industry is witnessing rapid advancements, with new missions planned to explore Mars and beyond.",
+    "user_id": 4
+  },
+  {
+    "id": 108,
+    "title": "Sustainable Energy Solutions",
+    "description": "Innovative solutions in sustainable energy are being developed to meet the growing demand for clean energy.",
+    "user_id": 2
+  },
+  {
+    "id": 109,
+    "title": "Cybersecurity Challenges",
+    "description": "As cyber threats become more sophisticated, organizations are investing in advanced cybersecurity measures.",
+    "user_id": 3
+  },
+  {
+    "id": 1010,
+    "title": "Urban Development Projects",
+    "description": "Major cities are launching new urban development projects to improve infrastructure and quality of life.",
+    "user_id": 3
+  }
+]

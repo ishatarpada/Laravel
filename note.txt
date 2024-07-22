@@ -285,7 +285,3 @@ in controller file include model file
 insert the data in array
 use variable guarded 
 
-
-
-
-
