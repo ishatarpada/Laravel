@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "role_name": "Admin"
+  },
+  {
+    "id": 2,
+    "role_name": "User"
+  },
+  {
+    "id": 3,
+    "role_name": "Editor"
+  },
+  {
+    "id": 4,
+    "role_name": "Moderator"
+  },
+  {
+    "id": 5,
+    "role_name": "Subscriber"
+  },
+  {
+    "id": 6,
+    "role_name": "Author"
+  },
+  {
+    "id": 7,
+    "role_name": "Contributor"
+  },
+  {
+    "id": 8,
+    "role_name": "Analyst"
+  },
+  {
+    "id": 9,
+    "role_name": "Manager"
+  },
+  {
+    "id": 10,
+    "role_name": "Guest"
+  },
+  {
+    "id": 11,
+    "role_name": "Operator"
+  },
+  {
+    "id": 12,
+    "role_name": "Supervisor"
+  },
+  {
+    "id": 13,
+    "role_name": "Technician"
+  },
+  {
+    "id": 14,
+    "role_name": "Engineer"
+  },
+  {
+    "id": 15,
+    "role_name": "Consultant"
+  }
+]

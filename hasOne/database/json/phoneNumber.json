@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "phoneNumber": "5522336688",
+    "company_id": 1
+  },
+  {
+    "id": 2,
+    "phoneNumber": "7788552211",
+    "company_id": 2
+  },
+  {
+    "id": 3,
+    "phoneNumber": "9966331144",
+    "company_id": 3
+  },
+  {
+    "id": 4,
+    "phoneNumber": "7788552200",
+    "company_id": 4
+  },
+  {
+    "id": 5,
+    "phoneNumber": "3322111445",
+    "company_id": 5
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "company_name": "Tesla",
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "company_name": "Google",
+    "user_id": 2
+  },
+  {
+    "id": 3,
+    "company_name": "Microsoft",
+    "user_id": 3
+  },
+  {
+    "id": 4,
+    "company_name": "Facebook",
+    "user_id": 4
+  },
+  {
+    "id": 5,
+    "company_name": "Flipcart",
+    "user_id": 5
+  }
+]
