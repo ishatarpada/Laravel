@@ -2,46 +2,57 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Scopes\UserScope;
+use Illuminate\Database\Eloquent\Attributes\ScopedBy;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+#[ScopedBy([UserScope::class])]
+
+class User extends Model
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    public function post()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->hasMany(Post::class);
     }
+
+    /* LOCAL SCOPE */
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
+
+    /* public function scopeCity($query , $cityName){
+        return $query->where('city' ,$cityName);
+    } */
+
+
+    public function scopeCity($query, $cityName)
+    {
+        return $query->whereIn('city', $cityName);
+    }
+
+    public function scopeSort($query)
+    {
+        return $query->orderBy('name', 'asc');
+    }
+
+    /* GLOBAL SCOPE METHOD 1*/
+
+
+    /* protected static function booted():void
+    {
+        static::addGlobalScope('userDetail' , function(Builder $builder){
+            $builder->where('status' , 1);
+        });
+
+        static::addGlobalScope(new UserScope);
+    } */
+
+
+    /* REMOVE GLOBAL SCOPE 
+    User::withoutScope('userDetail')->get(); */
 }
