@@ -1,0 +1,106 @@
+MiddleWare :-
+
+Types of Middleware :-
+1. Route Middleware
+2. Middlewares Group
+3. Global Middleware
+
+
+How to create and work with middleware :-
+
+1. php artisan make:middleware ValidUser
+
+2. apply the condition and create middleware in middleware file ValidUser function.
+
+---ROUTE MIDDLEWARE----
+
+3.use the middleware in web.php route file
+like :- Route::get("/dashboard" , [UserController::class , 'dashboard'])->middleware(validUser::class);
+
+
+---MIDDLEWARE GROUP----
+3.use the middleware in bootstrap/app.php file
+
+
+---GLOBAL MIDDLEWARE----
+3. use the middleware in bootstrap/app.php file.
+
+------------------------------------------------------------------------------
+
+Session :- temporary information store on server and user can retrieve this information on another page.
+
+example :- user Authentication
+Shopping Cart
+Flash Messages
+Multi-Step Form
+User preferences
+Form Data Preservation
+Captcha Verification
+
+steps to work with Session
+
+1. Store Session
+2. Read Session
+3. Delete Session
+
+Session Methods
+
+session()->has('key')
+session()->exists('key')
+session()->only(['key1' , 'key2'])
+session()->except(['key1' , 'key2'])
+session()->increment('count')
+session()->decrement('count')
+session()->regenerate()
+session()->flash('key' , 'message')
+
+
+------------------------------------------------------------------------------
+
+Gates :-
+any user show to any pages before check the condition like user is valid or not ?
+gates apply on route or blade or controller or middleware file.
+
+real life example:-
+Admin can only access admin panel or specific page.
+user must be valid age.
+Valid user can view and update a user profile and setting pages.
+Only Admin can approve the post.
+
+
+Steps to work with gates :-
+
+1. in AppServiceProvider.php file , create gate and function for check condition.
+
+2. Route with Gates /
+Blade File with Gates /
+Controller File with Gate /
+MiddleWare with Gates
+
+
+------------------------------------------------------------------------------
+
+Policies :- policies are same as gates but difference is the how to create.
+
+php artisan make:policy PostPolicy.
+
+
+------------------------------------------------------------------------------
+
+Send Email :-
+
+SignUp confirmation Email
+forget password mail
+send otp for login
+sending newsletter mail
+update personal data like password mail
+send bill from e-commerce website
+
+
+Steps to work with mails:-
+1. Email server
+2. open .env File
+3. controller file
+4. create email file :- using this command php artisan make:mail welcomeemail
+
+Send email with Attachment :-
