@@ -104,3 +104,94 @@ Steps to work with mails:-
 4. create email file :- using this command php artisan make:mail welcomeemail
 
 Send email with Attachment :-
+
+
+------------------------------------------------------------------------------
+
+
+API :-
+=> API is a set of rules and protocols
+=> Application Program Interface.
+=> API is used for the when fronted library not directly communicate to database when this library send the request to
+the API and API this request send to directly database and database send the response to API and API send this response
+to fronted library.
+
+Laravel PACKAGES FOR API
+
+1. Sanctum
+2. Passport
+
+
+steps :
+1. php artisan install:api =>install Sanctum Package
+
+2. use HasApiTokens in user model file.
+
+------------------------------------------------------------------------------
+
+
+AJAX CRUD with API
+
+Implement AJAX in different ways
+1. javascript Ajax (AMLhttprequest)
+2. jQuery($.Ajax())
+3. javascript Fetch() Method
+4. Axios.js
+
+-------------------------------------
+
+API with Fetch() Method :-
+Fetch(API file / URL{
+  method : "POSt|PUT|DELETE|GET",
+  body : data ----> Form Data / Json Data / Text ,
+  header: {
+    'Content-Type' : 'Application/json',
+    'x-HTTP-Method-Override' : 'PUT'
+  }
+});
+
+Fetch(API file / URL{
+  method : "POSt|PUT|DELETE|GET",
+  body : data ----> Form Data / Json Data / Text ,
+  header: {
+    'Authorization' : `Bearer ${token}`,
+    'x-HTTP-Method-Override' : 'PUT'
+  }
+}).then(function(response){
+  return response.json();
+}).then(function(result)){
+console.log(result)
+}
+
+-------------------------------------
+
+$.ajax({
+  url:"APL File URL",
+  type:"POST",
+  data: String / Array / Object,
+  contentType : 'application/json',
+  success : function(data){
+    <!-- message -->
+  }
+})
+
+
+-------------------------------------
+
+
+Save Token with Local Storage:- 
+
+1. store the data
+localStorage.setItem(key,value);
+
+2. show the data
+localStorage.getItem(key);
+
+3.remove the data
+localStorage.removeItem(key);
+
+4. all data clear
+localStorage.clear();
+
+
+-------------------------------------
